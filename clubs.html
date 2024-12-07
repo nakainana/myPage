@@ -38,6 +38,42 @@
       .club a:hover {
         text-decoration: underline;
       }
+      #backToBottomBtn {
+        position: fixed;
+        bottom: 60px;
+        right: 30px;
+        z-index: 99;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        background-color: #0078d4;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 10px;
+      }
+      #backToBottomBtn:hover {
+        background-color: #005a9e;
+      }
+      .btn-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+      }
+      #backToIntroductionBtn {
+        font-size: 18px;
+        border: none;
+        outline: none;
+        background-color: #0078d4;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 10px;
+      }
+      #backToIntroductionBtn:hover {
+        background-color: #005a9e;
+      }
     </style>
   </head>
   <body>
@@ -45,29 +81,28 @@
       <h1>部活動紹介</h1>
 
       <div class="club">
-        <h2>サッカー部</h2>
-        <p>
-          サッカー部は、週3回の練習を行い、大会にも参加しています。チームワークと体力向上を目指しています。
-        </p>
-        <a href="soccer.html">詳細を見る</a>
-      </div>
-
-      <div class="club">
-        <h2>吹奏楽部</h2>
-        <p>
-          吹奏楽部では、楽器の演奏技術を磨きながら、コンサートやイベントでの演奏を行っています。
-        </p>
+        <h2>器楽部</h2>
+        <p>器楽部は、週1回金曜日に練習を行い、みんなで楽しく、弾いています。</p>
         <a href="music.html">詳細を見る</a>
       </div>
 
       <div class="club">
-        <h2>茶道部</h2>
+        <h2>バレーボール部</h2>
         <p>
-          茶道部は、日本の伝統文化を学びながら、茶会やお点前の練習をしています。
+          バレーボール部では、1年に1回の学校での勝負に向けて試合を行っています。
         </p>
-        <a href="tea.html">詳細を見る</a>
+        <a href="volleyball.html">詳細を見る</a>
+      </div>
+
+      <div class="btn-center">
+        <button
+          onclick="location.href='index.html'"
+          id="backToIntroductionBtn"
+          title="紹介ページに戻る"
+        >
+          紹介ページに戻る
+        </button>
       </div>
     </div>
   </body>
 </html>
-<br /><br /><button onclick="location.href='clubs.html'">部活動</button>
