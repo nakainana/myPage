@@ -9,7 +9,8 @@
       body {
         font-family: Arial, sans-serif;
         text-align: center;
-        background: #f0f0f0;
+        background: url("ocean.jpg") no-repeat center center fixed; /* 背景を海の画像に設定 */
+        background-size: cover;
         margin: 0;
         padding: 0;
       }
@@ -17,7 +18,7 @@
         max-width: 600px;
         margin: 20px auto;
         padding: 20px;
-        background: #04c9ae;
+        background: rgba(255, 255, 255, 0.8); /* 背景を半透明に設定 */
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       }
@@ -28,14 +29,14 @@
       }
       button {
         padding: 10px 20px;
-        background: #49c5a6;
+        background: #3498db; /* 青いボタン */
         color: #fff;
         border: none;
         border-radius: 4px;
         cursor: pointer;
       }
       button:hover {
-        background: #0078d4;
+        background: #2980b9;
       }
       #backToBottomBtn {
         position: fixed;
@@ -45,26 +46,60 @@
         font-size: 18px;
         border: none;
         outline: none;
-        background-color: #0078d4;
+        background-color: #2980b9;
         color: white;
         cursor: pointer;
         padding: 15px;
         border-radius: 10px;
       }
       #backToBottomBtn:hover {
-        background-color: #005a9e;
+        background-color: #1f5c87;
+      }
+      /* 魚のアニメーション */
+      .fish {
+        width: 50px;
+        position: absolute;
+        animation: swim 10s infinite;
+      }
+      @keyframes swim {
+        0% {
+          transform: translateX(-100%);
+        }
+        100% {
+          transform: translateX(100%);
+        }
+      }
+      /* 貝殻のデザイン */
+      .shell {
+        width: 30px;
+        position: absolute;
       }
     </style>
   </head>
   <body>
     <div class="container">
       <h1>なかいななです</h1>
-      <img src="profile.png" alt="profile picture" />
+      <img src="fishme.png" alt="profile picture" />
       <p>なかよくしてくれると嬉しいです</p>
       <button onclick="location.href='mailto:nanachnakai@outlook.jp'">
         メールを送る
       </button>
       <button onclick="location.href='clubs.html'">部活動</button>
     </div>
+    <img src="fish.png" alt="fish" class="fish" style="top: 20%; left: 0" />
+    <img src="fish.png" alt="fish" class="fish" style="top: 50%; left: 0" />
+    <img src="fish.png" alt="fish" class="fish" style="top: 80%; left: 0" />
+    <img
+      src="shell.png"
+      alt="shell"
+      class="shell"
+      style="top: 10%; right: 10%"
+    />
+    <img
+      src="shell.png"
+      alt="shell"
+      class="shell"
+      style="top: 70%; right: 30%"
+    />
   </body>
 </html>
