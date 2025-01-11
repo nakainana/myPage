@@ -9,8 +9,11 @@
       body {
         font-family: Arial, sans-serif;
         text-align: center;
-        background: url("ocean.jpg") no-repeat center center fixed; /* 背景を海の画像に設定 */
-        background-size: cover;
+        background: linear-gradient(
+          to right,
+          #ff0062 50%,
+          #004b0c 50%
+        ); /* 背景を半々に分ける */
         margin: 0;
         padding: 0;
       }
@@ -55,13 +58,13 @@
       #backToBottomBtn:hover {
         background-color: #1f5c87;
       }
-      /* 魚のアニメーション */
-      .fish {
+      /* フランドール・スカーレットのアニメーション */
+      .flandre {
         width: 50px;
         position: absolute;
-        animation: swim 10s infinite;
+        animation: fly 10s infinite;
       }
-      @keyframes swim {
+      @keyframes fly {
         0% {
           transform: translateX(-100%);
         }
@@ -69,36 +72,95 @@
           transform: translateX(100%);
         }
       }
-      /* 貝殻のデザイン */
-      .shell {
-        width: 30px;
+      /* 古明地こいしのデザイン */
+      .koishi {
+        width: 50px;
         position: absolute;
+        animation: moveFromRight 10s infinite;
+      }
+      @keyframes moveFromRight {
+        0% {
+          transform: translateX(100%);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+      /* ハートのアニメーション */
+      .heart {
+        display: inline-block;
+        animation: glow 1.5s infinite;
+      }
+      @keyframes glow {
+        0% {
+          text-shadow: 0 0 5px #fff;
+        }
+        50% {
+          text-shadow: 0 0 20px #ff0000;
+        }
+        100% {
+          text-shadow: 0 0 5px #fff;
+        }
+      }
+      .green-glow {
+        animation: green-glow 1.5s infinite;
+      }
+      @keyframes green-glow {
+        0% {
+          text-shadow: 0 0 5px #fff;
+        }
+        50% {
+          text-shadow: 0 0 20px #00ff00;
+        }
+        100% {
+          text-shadow: 0 0 5px #fff;
+        }
       }
     </style>
   </head>
   <body>
     <div class="container">
       <h1>なかいななです</h1>
-      <img src="fishme.png" alt="profile picture" />
-      <p>なかよくしてくれると嬉しいです</p>
+      <img src="my.gif" alt="profile picture" />
+      <p>
+        <span class="heart green-glow">💚</span
+        >フランドールスカーレットと古明地こいしが好きです<span class="heart"
+          >❤️</span
+        >
+      </p>
       <button onclick="location.href='mailto:nanachnakai@outlook.jp'">
         メールを送る
       </button>
       <button onclick="location.href='clubs.html'">部活動</button>
     </div>
-    <img src="fish.png" alt="fish" class="fish" style="top: 20%; left: 0" />
-    <img src="fish.png" alt="fish" class="fish" style="top: 50%; left: 0" />
-    <img src="fish.png" alt="fish" class="fish" style="top: 80%; left: 0" />
     <img
-      src="shell.png"
-      alt="shell"
-      class="shell"
+      src="flandre.png"
+      alt="flandre"
+      class="flandre"
+      style="top: 20%; left: 0"
+    />
+    <img
+      src="flandre.png"
+      alt="flandre"
+      class="flandre"
+      style="top: 50%; left: 0"
+    />
+    <img
+      src="flandre.png"
+      alt="flandre"
+      class="flandre"
+      style="top: 80%; left: 0"
+    />
+    <img
+      src="koishi.png"
+      alt="koishi"
+      class="koishi"
       style="top: 10%; right: 10%"
     />
     <img
-      src="shell.png"
-      alt="shell"
-      class="shell"
+      src="koishi.png"
+      alt="koishi"
+      class="koishi"
       style="top: 70%; right: 30%"
     />
   </body>
