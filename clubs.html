@@ -7,7 +7,11 @@
     <style>
       body {
         font-family: Arial, sans-serif;
-        background: #cce7e8; /* 海のイメージに変更 */
+        background: linear-gradient(
+          to right,
+          #004b0c 50%,
+          /* 左半分の色 */ #ff0062 50% /* 右半分の色 */
+        );
         margin: 0;
         padding: 0;
       }
@@ -15,7 +19,7 @@
         max-width: 800px;
         margin: 20px auto;
         padding: 20px;
-        background: #e6f7f8; /* 柔らかな青に変更 */
+        background: rgba(255, 255, 255, 0.8); /* 背景を半透明に設定 */
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       }
@@ -75,6 +79,18 @@
       #backToIntroductionBtn:hover {
         background-color: #01579b;
       }
+      /* キャラクターのデザイン */
+      .character {
+        width: 200px; /* サイズを大きく設定 */
+        position: absolute;
+        bottom: 20px; /* 位置を少し上に調整 */
+      }
+      .flandre {
+        right: 10%;
+      }
+      .koishi {
+        left: 10%;
+      }
     </style>
   </head>
   <body>
@@ -105,5 +121,11 @@
         </button>
       </div>
     </div>
+    <img
+      src="flandre.png"
+      alt="フランドールスカーレット"
+      class="character flandre"
+    />
+    <img src="koishi.png" alt="古明地こいし" class="character koishi" />
   </body>
 </html>

@@ -116,11 +116,50 @@
           text-shadow: 0 0 5px #fff;
         }
       }
+      /* 虹色のテキストアニメーション */
+      .rainbow {
+        font-weight: bold;
+        animation: rainbow-glow 7s infinite;
+      }
+      @keyframes rainbow-glow {
+        0% {
+          color: red;
+          text-shadow: 0 0 5px red;
+        }
+        14% {
+          color: orange;
+          text-shadow: 0 0 5px orange;
+        }
+        28% {
+          color: yellow;
+          text-shadow: 0 0 5px yellow;
+        }
+        42% {
+          color: green;
+          text-shadow: 0 0 5px green;
+        }
+        57% {
+          color: blue;
+          text-shadow: 0 0 5px blue;
+        }
+        71% {
+          color: indigo;
+          text-shadow: 0 0 5px indigo;
+        }
+        85% {
+          color: violet;
+          text-shadow: 0 0 5px violet;
+        }
+        100% {
+          color: red;
+          text-shadow: 0 0 5px red;
+        }
+      }
     </style>
   </head>
   <body>
     <div class="container">
-      <h1>なかいななです</h1>
+      <h1 class="rainbow">なかいななです</h1>
       <img src="my.gif" alt="profile picture" />
       <p>
         <span class="heart green-glow">💚</span
