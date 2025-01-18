@@ -9,11 +9,8 @@
       body {
         font-family: Arial, sans-serif;
         text-align: center;
-        background: linear-gradient(
-          to right,
-          #ff0062 50%,
-          #004b0c 50%
-        ); /* 背景を半々に分ける */
+        background: url("koihura.jpg") no-repeat center center fixed; /* 背景画像を設定 */
+        background-size: cover; /* 画像をカバー範囲に拡大 */
         margin: 0;
         padding: 0;
       }
@@ -57,34 +54,6 @@
       }
       #backToBottomBtn:hover {
         background-color: #1f5c87;
-      }
-      /* フランドール・スカーレットのアニメーション */
-      .flandre {
-        width: 50px;
-        position: absolute;
-        animation: fly 10s infinite;
-      }
-      @keyframes fly {
-        0% {
-          transform: translateX(-100%);
-        }
-        100% {
-          transform: translateX(100%);
-        }
-      }
-      /* 古明地こいしのデザイン */
-      .koishi {
-        width: 50px;
-        position: absolute;
-        animation: moveFromRight 10s infinite;
-      }
-      @keyframes moveFromRight {
-        0% {
-          transform: translateX(100%);
-        }
-        100% {
-          transform: translateX(-100%);
-        }
       }
       /* ハートのアニメーション */
       .heart {
@@ -172,35 +141,23 @@
       </button>
       <button onclick="location.href='clubs.html'">部活動</button>
     </div>
-    <img
-      src="flandre.png"
-      alt="flandre"
-      class="flandre"
-      style="top: 20%; left: 0"
-    />
-    <img
-      src="flandre.png"
-      alt="flandre"
-      class="flandre"
-      style="top: 50%; left: 0"
-    />
-    <img
-      src="flandre.png"
-      alt="flandre"
-      class="flandre"
-      style="top: 80%; left: 0"
-    />
-    <img
-      src="koishi.png"
-      alt="koishi"
-      class="koishi"
-      style="top: 10%; right: 10%"
-    />
-    <img
-      src="koishi.png"
-      alt="koishi"
-      class="koishi"
-      style="top: 70%; right: 30%"
-    />
+
+    <audio id="bgm" autoplay loop>
+      <source src="フラこい.mp3" type="audio/mpeg" />
+      お使いのブラウザではオーディオタグをサポートしていません。
+    </audio>
+
+    <button onclick="togglePlay()">再生 / ストップ</button>
+
+    <script>
+      function togglePlay() {
+        var audio = document.getElementById("bgm");
+        if (audio.paused) {
+          audio.play();
+        } else {
+          audio.pause();
+        }
+      }
+    </script>
   </body>
 </html>

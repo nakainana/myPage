@@ -7,11 +7,8 @@
     <style>
       body {
         font-family: Arial, sans-serif;
-        background: linear-gradient(
-          to right,
-          #004b0c 50%,
-          /* 左半分の色 */ #ff0062 50% /* 右半分の色 */
-        );
+        background: url("フラこい.jpg") no-repeat center center fixed; /* 背景画像を設定 */
+        background-size: cover; /* 画像をカバー範囲に拡大 */
         margin: 0;
         padding: 0;
       }
@@ -25,40 +22,23 @@
       }
       h1 {
         text-align: center;
-        color: #005f6b; /* 深海の色に変更 */
+        color: #005f6b;
       }
       .club {
         margin: 20px 0;
       }
       .club h2 {
-        color: #026873; /* 海の深さを感じさせる色に変更 */
+        color: #026873;
       }
       .club p {
         margin: 10px 0;
       }
       .club a {
-        color: #0396a6; /* 明るい青に変更 */
+        color: #0396a6;
         text-decoration: none;
       }
       .club a:hover {
         text-decoration: underline;
-      }
-      #backToBottomBtn {
-        position: fixed;
-        bottom: 60px;
-        right: 30px;
-        z-index: 99;
-        font-size: 18px;
-        border: none;
-        outline: none;
-        background-color: #0277bd; /* 深い海の青に変更 */
-        color: white;
-        cursor: pointer;
-        padding: 15px;
-        border-radius: 10px;
-      }
-      #backToBottomBtn:hover {
-        background-color: #01579b;
       }
       .btn-center {
         display: flex;
@@ -78,18 +58,6 @@
       }
       #backToIntroductionBtn:hover {
         background-color: #01579b;
-      }
-      /* キャラクターのデザイン */
-      .character {
-        width: 200px; /* サイズを大きく設定 */
-        position: absolute;
-        bottom: 20px; /* 位置を少し上に調整 */
-      }
-      .flandre {
-        right: 10%;
-      }
-      .koishi {
-        left: 10%;
       }
     </style>
   </head>
@@ -121,11 +89,5 @@
         </button>
       </div>
     </div>
-    <img
-      src="flandre.png"
-      alt="フランドールスカーレット"
-      class="character flandre"
-    />
-    <img src="koishi.png" alt="古明地こいし" class="character koishi" />
   </body>
 </html>
